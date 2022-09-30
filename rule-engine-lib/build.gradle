@@ -1,0 +1,31 @@
+plugins {
+	id "java-library"
+	id "com.github.ben-manes.versions" version "0.42.0"
+}
+
+group = 'com.github.chinnayyanalla.ruleengine'
+version = '1.0.0'
+
+sourceCompatibility = '11'
+
+repositories {
+	mavenCentral()
+}
+
+dependencies {
+
+	/* Adding Spring Boot Dependencies */
+	implementation("org.springframework.boot:spring-boot-starter-web:2.7.4")
+
+	/* Adding Jackson Dependencies */
+	implementation("com.fasterxml.jackson.core:jackson-databind:2.13.4")
+
+	/* Adding Lombok Dependencies */
+	compileOnly("org.projectlombok:lombok:1.18.24")
+	annotationProcessor("org.projectlombok:lombok:1.18.24")
+
+}
+
+test {
+	useJUnitPlatform()
+}
