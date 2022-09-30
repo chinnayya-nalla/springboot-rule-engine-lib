@@ -2,7 +2,7 @@ rootProject.name = 'sample-app'
 
 include 'rule-engine-lib'
 
-project(':rule-engine-lib').projectDir = new File(settingsDir, '../rule-engine-lib')
+project(':rule-engine-lib').projectDir = new File(settingsDir, '../../rule-engine-lib')
 
 def projects = getRootProject()
 projects.each {println "name:" + it.name }
